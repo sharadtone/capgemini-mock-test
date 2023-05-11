@@ -1,0 +1,57 @@
+1. Create 10 files:-
+ 
+   for ($i=0;$i-lt 10;$i++)
+ {
+     $filename = 'sharad'+$i+'.txt'
+       New-Item $filename -ItemType File
+ }
+
+2. Create 10 folders:-
+
+for ($i=0;$i-lt 10;$i++)
+{
+       New-Item C:\Users\SHTONE\Desktop\cmd\sharad$i -ItemType Directory
+}
+
+3. Create 10 folders inside the folders created in step 2
+
+ for($i=0;$i -lt 10;$i++)
+{
+        for ($j=0;$j-lt 10;$j++)
+        {
+                   New-Item C:\Users\SHTONE\Desktop\cmd\sharad$i\sharadnew$j -ItemType Directory
+        }
+
+ }
+
+4. Create 10 files in the 10 folders created in step 3
+
+
+for ($i=0;$i -lt 10;$i++)
+>> {
+>>        for ($j=0;$j-lt 10;$j++)
+          {
+>>                for($k=0;$k -lt 10;$k++){   New-Item C:\Users\SHTONE\Desktop\cmd\sharad$i\sharadnew$j\sharadnewfile$k.txt -ItemType file}
+>>        }
+>>
+>> }
+
+
+5. Copy 10 files to each of 10 folders
+
+ for ($i=0;$i -lt 10;$i++)
+>> {
+>>        for ($j=0;$j-lt 10;$j++){
+>>                Copy-Item C:\Users\SHTONE\Desktop\cmd\sharad$j.txt -Recurse -Destination C:\Users\SHTONE\Desktop\cmd\sharad$i
+>>       }
+>>
+>> }
+
+6. Remove all the files from the folders:-
+
+for ($i=0;$i -lt 10;$i++)
+>>  {
+>>        for ($j=0;$j-lt 10;$j++){
+>>                remove-Item C:\Users\SHTONE\Desktop\cmd\sharad$i\sharad$j.txt
+>>       }
+    }
